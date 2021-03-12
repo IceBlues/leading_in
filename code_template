@@ -1,0 +1,24 @@
+let inputs = document.getElementsByTagName("input");
+let name_input = inputs[0];
+let add_btn = inputs[1];
+let easy_btn = inputs[2];
+let medium_btn = inputs[3];
+let hard_btn = inputs[4];
+let data = ${data};
+for (var i=0; i<data.length; i++) {
+    console.log(data[i][0], data[i][1]);
+    if (data[i][1] == 0) easy_btn.click();
+    if (data[i][1] == 1) medium_btn.click();
+    if (data[i][1] == 2) hard_btn.click();
+    let input = name_input;
+    let lastValue = input.value;
+    input.value = data[i][0];
+    let event = new Event('input', { bubbles: true });
+    event.simulated = true;
+    let tracker = input._valueTracker;
+    if (tracker) {
+      tracker.setValue(lastValue);
+    }
+    input.dispatchEvent(event);
+    add_btn.click();
+}
