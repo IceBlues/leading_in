@@ -48,7 +48,7 @@ Leading In是在Windows平台下用于批量导入 [你画我猜](https://gartic
 
 # 如何使用
 
-- 下载 leading_in.zip
+- [下载](https://github.com/IceBlues/leading_in/releases/) leading_in.zip 
 
 - 打开后解压，双击 leading_in.exe 并按照提示操作
 
